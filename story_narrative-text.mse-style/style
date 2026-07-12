@@ -1,0 +1,145 @@
+mse version: 2.0.0
+game: story_narrative
+short name: Text Narrative
+full name: Story Narrative — Text
+installer group: Story Narrative/Styles
+icon: card-sample.png
+position hint: 001
+version: 1.0.0
+
+depends on:
+	package: story_narrative.mse-game
+	version: 1.0.0
+depends on:
+	package: story-narrative-symbols-small.mse-symbol-font
+	version: 1.0.0
+depends on:
+	package: story-narrative-symbols-large.mse-symbol-font
+	version: 1.0.0
+
+card width: 750
+card height: 1050
+card dpi: 300
+
+card style:
+	title:
+		left: 58
+		top: 52
+		width: 445
+		height: 66
+		z index: 3
+		alignment: left middle shrink-overflow
+		font:
+			name: Arial
+			size: 38
+			scale down to: 24
+			weight: bold
+			color: rgb(30,30,30)
+
+	header symbols:
+		right: 690
+		top: 58
+		width: 175
+		height: 52
+		z index: 3
+		alignment: right middle shrink-overflow
+		font:
+			name: Arial
+			size: 23
+			color: rgb(30,30,30)
+		symbol font:
+			name: story-narrative-symbols-large
+			size: 28
+		always symbol: true
+
+	story 1:
+		left: 68
+		top: 153
+		width: 614
+		height: 248
+		z index: 3
+		alignment: top left
+		font:
+			name: Georgia
+			size: 27
+			scale down to: 18
+			color: rgb(30,30,30)
+
+	separator 1 symbols:
+		right: 680
+		top: 414
+		width: 185
+		height: 42
+		z index: 4
+		visible: {card.story_2 != ""}
+		alignment: right middle shrink-overflow
+		font:
+			name: Arial
+			size: 22
+			color: rgb(30,30,30)
+		symbol font:
+			name: story-narrative-symbols-small
+			size: 22
+			always symbol: true
+
+	story 2:
+		left: 68
+		top: 468
+		width: 614
+		height: 222
+		z index: 3
+		visible: {card.story_2 != ""}
+		alignment: top left
+		font:
+			name: Georgia
+			size: 27
+			scale down to: 18
+			color: rgb(30,30,30)
+
+	separator 2 symbols:
+		right: 680
+		top: 706
+		width: 185
+		height: 42
+		z index: 4
+		visible: {card.story_3 != ""}
+		alignment: right middle shrink-overflow
+		font:
+			name: Arial
+			size: 22
+			color: rgb(30,30,30)
+		symbol font:
+			name: story-narrative-symbols-small
+			size: 22
+			always symbol: true
+
+	story 3:
+		left: 68
+		top: 760
+		width: 614
+		height: 222
+		z index: 3
+		visible: {card.story_3 != ""}
+		alignment: top left
+		font:
+			name: Georgia
+			size: 27
+			scale down to: 18
+			color: rgb(30,30,30)
+
+extra card field:
+	type: choice
+	name: frame
+	choice: frame
+	save value: false
+	editable: false
+
+extra card style:
+	frame:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: -10
+		render style: image
+		image: frame.png

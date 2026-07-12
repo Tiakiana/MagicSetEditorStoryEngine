@@ -1,0 +1,80 @@
+mse version: 2.0.0
+short name: Story Narrative
+full name: Story Narrative Card Game
+installer group: Story Narrative/Game Files
+version: 1.0.0
+
+set field:
+	type: info
+	name: Set Information
+
+set field:
+	type: text
+	name: title
+	identifying: true
+
+set field:
+	type: text
+	name: description
+	multi line: true
+
+set field:
+	type: text
+	name: designer
+
+set field:
+	type: text
+	name: copyright
+
+card field:
+	type: text
+	name: title
+	identifying: true
+	card list visible: true
+	card list name: Title
+	card list column: 0
+	card list width: 180
+
+card field:
+	type: text
+	name: header symbols
+	description: Use square-bracket symbols such as [H][D][K].
+
+card field:
+	type: image
+	name: illustration
+	show statistics: false
+
+card field:
+	type: text
+	name: story 1
+	multi line: true
+	description: Main narrative text.
+
+card field:
+	type: text
+	name: separator 1 symbols
+	description: Up to six symbols before Story 2.
+
+card field:
+	type: text
+	name: story 2
+	multi line: true
+	description: Optional second story section.
+
+card field:
+	type: text
+	name: separator 2 symbols
+	description: Up to six symbols before Story 3.
+
+card field:
+	type: text
+	name: story 3
+	multi line: true
+	description: Optional third story section.
+
+card field:
+	type: text
+	name: notes
+	multi line: true
+	show statistics: false

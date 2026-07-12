@@ -1,0 +1,73 @@
+mse version: 2.0.0
+short name: Story Narrative Large
+position hint: 202
+icon: D.png
+version: 1.0.0
+installer group: Story Narrative/Symbols/Large
+
+image font size: 256
+horizontal space: 2
+
+symbol:
+	code: H
+	image: H.png
+
+symbol:
+	code: hourglass
+	image: H.png
+
+symbol:
+	code: D
+	image: D.png
+
+symbol:
+	code: diamond
+	image: D.png
+
+symbol:
+	code: S
+	image: S.png
+
+symbol:
+	code: square
+	image: S.png
+
+symbol:
+	code: C
+	image: C.png
+
+symbol:
+	code: circle
+	image: C.png
+
+symbol:
+	code: P
+	image: P.png
+
+symbol:
+	code: pentagon
+	image: P.png
+
+symbol:
+	code: K
+	image: K.png
+
+symbol:
+	code: key
+	image: K.png
+
+symbol:
+	code: L
+	image: L.png
+
+symbol:
+	code: lock
+	image: L.png
+
+symbol:
+	code: E
+	image: E.png
+
+symbol:
+	code: eyeup
+	image: E.png

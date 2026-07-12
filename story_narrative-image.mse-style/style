@@ -1,0 +1,87 @@
+mse version: 2.0.0
+game: story_narrative
+short name: Image Narrative
+full name: Story Narrative — Image
+installer group: Story Narrative/Styles
+icon: card-sample.png
+position hint: 002
+version: 1.0.0
+
+depends on:
+	package: story_narrative.mse-game
+	version: 1.0.0
+depends on:
+	package: story-narrative-symbols-large.mse-symbol-font
+	version: 1.0.0
+
+card width: 750
+card height: 1050
+card dpi: 300
+
+card style:
+	title:
+		left: 58
+		top: 52
+		width: 445
+		height: 66
+		z index: 3
+		alignment: left middle shrink-overflow
+		font:
+			name: Arial
+			size: 38
+			scale down to: 24
+			weight: bold
+			color: rgb(30,30,30)
+
+	header symbols:
+		right: 690
+		top: 58
+		width: 175
+		height: 52
+		z index: 3
+		alignment: right middle shrink-overflow
+		font:
+			name: Arial
+			size: 23
+			color: rgb(30,30,30)
+		symbol font:
+			name: story-narrative-symbols-large
+			size: 28
+			always symbol: true
+
+	illustration:
+		left: 58
+		top: 146
+		width: 634
+		height: 520
+		z index: 1
+
+	story 1:
+		left: 74
+		top: 708
+		width: 602
+		height: 252
+		z index: 3
+		alignment: top left
+		font:
+			name: Georgia
+			size: 28
+			scale down to: 18
+			color: rgb(30,30,30)
+
+extra card field:
+	type: choice
+	name: frame
+	choice: frame
+	save value: false
+	editable: false
+
+extra card style:
+	frame:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: -10
+		render style: image
+		image: frame.png
