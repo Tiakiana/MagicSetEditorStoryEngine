@@ -1,0 +1,108 @@
+mse version: 2.0.0
+game: story_narrative
+short name: Story Front
+full name: Story Narrative — Front
+installer group: Story Narrative/Styles
+icon: card-sample.png
+position hint: 003
+version: 1.1.1
+
+depends on:
+	package: story_narrative.mse-game
+	version: 1.0.1
+
+card width: 750
+card height: 1050
+card dpi: 300
+
+card style:
+	front illustration:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: -5
+
+	title:
+		left: 105
+		top: 438
+		width: 540
+		height: 76
+		z index: 3
+		alignment: center middle shrink-overflow
+		font:
+			name: Trajan Pro
+			size: 43
+			scale down to: 25
+			weight: bold
+			color: rgb(28,28,28)
+
+	card number:
+		left: 300
+		top: 538
+		width: 150
+		height: 34
+		z index: 3
+		alignment: center middle shrink-overflow
+		font:
+			name: Trajan Pro
+			size: 21
+			scale down to: 15
+			weight: bold
+			color: rgb(28,28,28)
+
+	card total:
+		visible: false
+
+		left: 387
+		top: 538
+		width: 126
+		height: 34
+		z index: 3
+		alignment: left middle shrink-overflow
+		font:
+			name: Trajan Pro
+			size: 21
+			scale down to: 15
+			weight: bold
+			color: rgb(28,28,28)
+
+extra card field:
+	type: choice
+	name: front overlay
+	choice: overlay
+	save value: false
+	editable: false
+
+extra card field:
+	type: text
+	name: number slash
+	save value: false
+	editable: false
+
+extra card style:
+	front overlay:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: 1
+		render style: image
+		image: overlay.png
+
+	number slash:
+		visible: false
+
+		left: 363
+		top: 538
+		width: 24
+		height: 34
+		z index: 3
+		alignment: center middle
+		font:
+			name: Trajan Pro
+			size: 21
+			weight: bold
+			color: rgb(28,28,28)
+
+

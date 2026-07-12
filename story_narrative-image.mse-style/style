@@ -27,7 +27,7 @@ card style:
 		z index: 3
 		alignment: left middle shrink-overflow
 		font:
-			name: Arial
+			name: Trajan Pro
 			size: 38
 			scale down to: 24
 			weight: bold
@@ -41,13 +41,13 @@ card style:
 		z index: 3
 		alignment: right middle shrink-overflow
 		font:
-			name: Arial
+			name: Trajan Pro
 			size: 23
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-large
 			size: 28
-			always symbol: true
+		always symbol: true
 
 	illustration:
 		left: 58
@@ -64,7 +64,7 @@ card style:
 		z index: 3
 		alignment: top left
 		font:
-			name: Georgia
+			name: Trajan Pro
 			size: 28
 			scale down to: 18
 			color: rgb(30,30,30)

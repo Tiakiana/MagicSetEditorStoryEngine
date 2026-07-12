@@ -2,7 +2,7 @@ mse version: 2.0.0
 short name: Story Narrative
 full name: Story Narrative Card Game
 installer group: Story Narrative/Game Files
-version: 1.0.0
+version: 1.0.1
 
 set field:
 	type: info
@@ -72,6 +72,23 @@ card field:
 	name: story 3
 	multi line: true
 	description: Optional third story section.
+
+
+card field:
+	type: image
+	name: front illustration
+	show statistics: false
+	description: Full-card background artwork used by the Story Front style.
+
+card field:
+	type: text
+	name: card number
+	description: This card's number within the story, for example 3.
+
+card field:
+	type: text
+	name: card total
+	description: Total number of cards in the story, for example 12.
 
 card field:
 	type: text

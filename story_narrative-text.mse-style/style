@@ -30,7 +30,7 @@ card style:
 		z index: 3
 		alignment: left middle shrink-overflow
 		font:
-			name: Arial
+			name: Trajan Pro
 			size: 38
 			scale down to: 24
 			weight: bold
@@ -44,12 +44,12 @@ card style:
 		z index: 3
 		alignment: right middle shrink-overflow
 		font:
-			name: Arial
+			name: Trajan Pro
 			size: 23
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-large
-			size: 28
+			size: 33
 		always symbol: true
 
 	story 1:
@@ -60,7 +60,7 @@ card style:
 		z index: 3
 		alignment: top left
 		font:
-			name: Georgia
+			name: Trajan Pro
 			size: 27
 			scale down to: 18
 			color: rgb(30,30,30)
@@ -74,13 +74,13 @@ card style:
 		visible: {card.story_2 != ""}
 		alignment: right middle shrink-overflow
 		font:
-			name: Arial
+			name: Trajan Pro
 			size: 22
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-small
-			size: 22
-			always symbol: true
+			size: 33
+		always symbol: true
 
 	story 2:
 		left: 68
@@ -91,7 +91,7 @@ card style:
 		visible: {card.story_2 != ""}
 		alignment: top left
 		font:
-			name: Georgia
+			name: Trajan Pro
 			size: 27
 			scale down to: 18
 			color: rgb(30,30,30)
@@ -105,13 +105,13 @@ card style:
 		visible: {card.story_3 != ""}
 		alignment: right middle shrink-overflow
 		font:
-			name: Arial
+			name: Trajan Pro
 			size: 22
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-small
-			size: 22
-			always symbol: true
+			size: 33
+		always symbol: true
 
 	story 3:
 		left: 68
@@ -122,7 +122,7 @@ card style:
 		visible: {card.story_3 != ""}
 		alignment: top left
 		font:
-			name: Georgia
+			name: Trajan Pro
 			size: 27
 			scale down to: 18
 			color: rgb(30,30,30)
