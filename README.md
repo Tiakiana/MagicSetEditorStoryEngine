@@ -23,6 +23,11 @@ Story Narrative is a custom game built for Magic Set Editor (MSE).
 -   Story 2 and Story 3 are optional
 -   Conditional separator lines and icon rows
 
+### Installation
+Place these here folders in the data folder. :D
+Watch das magic
+
+
 ### Narrative Image
 
 -   Editable title
