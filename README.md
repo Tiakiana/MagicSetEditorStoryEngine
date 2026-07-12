@@ -1,265 +1,115 @@
-# Story Narrative Card Game (MSE) Design Notes
+# Story Narrative Engine v1 Design Notes
 
-## Project Goal
+## Overview
 
-Create a completely new game for Magic Set Editor (MSE), rather than
-modifying an existing Magic template.
+Story Narrative is a custom game built for Magic Set Editor (MSE).
 
-The project is divided into three template categories:
+### Packages
 
-1.  Narrative Cards
-2.  Card Fronts
-3.  Card Backs
+-   `story_narrative.mse-game`
+-   `story_narrative-text.mse-style`
+-   `story_narrative-image.mse-style`
+-   `story-narrative-symbols-small.mse-symbol-font`
+-   `story-narrative-symbols-large.mse-symbol-font`
 
-------------------------------------------------------------------------
+## Card Types
 
-# Narrative Cards
+### Narrative Text
 
-Narrative cards are the primary gameplay cards.
+-   Editable title
+-   Header icon row (up to 6 icons)
+-   Three story sections
+-   Story 1 is required
+-   Story 2 and Story 3 are optional
+-   Conditional separator lines and icon rows
 
-Two layouts are planned:
+### Narrative Image
 
--   Text Narrative
--   Image Narrative
+-   Editable title
+-   Header icon row
+-   Large illustration
+-   One large story text area
 
-Both layouts should share as much data as possible.
+## Removed
 
-------------------------------------------------------------------------
+The project no longer uses **Card Back** templates.
 
-# Text Narrative Card
+Instead, every playable card consists of two printed cards inside a
+sleeve.
 
-## Header
+# Physical Card System
 
--   Editable title (top left)
--   Header symbol row (top right)
--   Up to 6 inline symbols
+Each sleeve contains:
 
-Example:
+Front:
 
-Title ◇ ○ □ 🔒
+    Story Front
 
-------------------------------------------------------------------------
+Behind it:
 
-## Story Sections
+    Narrative Card
 
-### Story 1
+The front hides the narrative until it is intentionally revealed.
 
-Required.
+## Starting a Story
 
-Always visible.
+1.  Print all Narrative cards.
+2.  Print the matching Front cards.
+3.  Place the Narrative card into a sleeve.
+4.  Place the Front card in front of it in the same sleeve.
 
-### Story 2
+Only the Front card is visible.
 
-Optional.
+# Revealing Story
 
-Only appears if text exists.
+When instructed to take a card:
 
-If present:
+1.  Pick up the sleeved card.
+2.  Slowly slide the Narrative card upward behind the Front card.
+3.  Reveal the title.
+4.  Continue until a stopping icon is reached.
 
--   separator line appears automatically
--   separator symbol row appears automatically
+Never reveal more than instructed.
 
-### Story 3
+# Icon Behaviour
 
-Optional.
+## Hourglass `[H]`
 
-Only appears if text exists.
+Stop revealing. Return the card to play. Wait until the next time you
+are instructed to reveal this card.
 
-If present:
+## Eye + Up Arrow `[E]`
 
--   separator line appears automatically
--   separator symbol row appears automatically
+Continue sliding the Narrative card upward until the next divider line
+is reached.
 
-------------------------------------------------------------------------
+## Planned for Version 1.1
 
-# Separator Rules
+### Obtain icon
 
-Separator 1 appears only when Story 2 contains text.
+Gain or permanently keep the card.
 
-Separator 2 appears only when Story 3 contains text.
+### Discard icon
 
-Each separator has room for six symbols aligned to the right.
+Discard the card immediately after reaching this instruction.
 
-------------------------------------------------------------------------
+# Current Symbol Set
 
-# Symbol System
-
-The icons should work like Magic mana symbols.
-
-Users type tokens such as:
-
-{hourglass}{diamond}{key}
-
-and MSE renders icons inline.
-
-------------------------------------------------------------------------
-
-## Initial Symbols
-
-  Token         Meaning
-  ------------- ------------------
-  {hourglass}   Time / Wait
-  {diamond}     Orange Diamond
-  {square}      Red Square
-  {circle}      Purple Circle
-  {pentagon}    Blue Pentagon
-  {key}         Unlock
-  {lock}        Locked
-  {eyeup}       Observe / Reveal
-
-Additional symbols will be added later.
-
-------------------------------------------------------------------------
-
-# MSE Packages
-
-The project is split into three packages.
-
-## story_narrative.mse-game
-
-Defines:
-
--   card categories
--   fields
--   data model
-
-Current fields:
-
--   Title
--   Header Symbols
--   Story 1
--   Separator 1 Symbols
--   Story 2
--   Separator 2 Symbols
--   Story 3
--   Illustration
--   Notes
-
-------------------------------------------------------------------------
-
-## story_narrative-prototype.mse-style
-
-Defines:
-
--   card layout
--   text positions
--   separator positions
--   image placeholder
--   typography
-
-Current layout:
-
-Title
-
-Header symbols
-
-Story 1
-
-Separator 1
-
-Story 2
-
-Separator 2
-
-Story 3
-
-Illustration placeholder (Image Narrative only)
-
-------------------------------------------------------------------------
-
-## story-narrative-icons.mse-symbol-font
-
-Contains:
-
--   hourglass
--   diamond
--   square
--   circle
--   pentagon
--   key
--   lock
--   eyeup
-
-Goal:
-
-Render tokens exactly like Magic mana symbols.
-
-------------------------------------------------------------------------
-
-# Current Roadmap
-
-## Phase 1
-
--   Finish Text Narrative layout
--   Make separators fully conditional
--   Make symbol font functional
--   Improve typography
-
-## Phase 2
-
-Create Image Narrative layout.
-
-Image at top.
-
-Story text below.
-
-Reuse existing fields.
-
-## Phase 3
-
-Expand symbol language.
-
-Potential future symbols:
-
--   Fire
--   Blood
--   Moon
--   Sun
--   Skull
--   Speech
--   Question
--   Footsteps
--   Book
--   Choice
-
-## Phase 4
-
-Visual polish.
-
--   Parchment frame
--   Better fonts
--   Custom textures
--   Rounded title bar
--   Print-ready layout
-
-------------------------------------------------------------------------
-
-# Lessons Learned
-
-During implementation we discovered:
-
--   `.mse-game` defines data only.
--   `.mse-style` defines layout.
--   `.mse-symbol-font` defines inline icons.
-
-Warnings encountered:
-
--   `initial` is not accepted for free-text styling fields in this MSE
-    build.
--   `background` was not a valid card field inside `card style`.
-
-These were corrected by:
-
--   hardcoding fonts
--   removing the unsupported background block
-
-------------------------------------------------------------------------
+  Code    Meaning
+  ------- ----------------
+  \[H\]   Hourglass
+  \[D\]   Orange Diamond
+  \[S\]   Red Square
+  \[C\]   Purple Circle
+  \[P\]   Blue Pentagon
+  \[K\]   Key
+  \[L\]   Lock
+  \[E\]   Eye + Up Arrow
+
+Readable aliases are also supported.
 
 # Long-Term Vision
 
-The game should develop its own symbolic visual language similar to
-Magic's mana system.
-
-Players should eventually learn to read icon sequences naturally, making
-the cards concise while conveying conditions, actions, and requirements
-through symbols.
+The game should develop its own symbolic language similar to Magic's
+mana system. Icons should communicate pacing, actions, requirements, and
+game state while minimizing repeated text.
