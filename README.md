@@ -1,7 +1,6 @@
-# Story Narrative Engine v1 Design Notes
+# Story Narrative Engine v1.01 Design Notes
 
 ## Overview
-
 Story Narrative is a custom game built for Magic Set Editor (MSE).
 
 ### Packages
@@ -11,6 +10,10 @@ Story Narrative is a custom game built for Magic Set Editor (MSE).
 -   `story_narrative-image.mse-style`
 -   `story-narrative-symbols-small.mse-symbol-font`
 -   `story-narrative-symbols-large.mse-symbol-font`
+
+# Installation
+Place these here folders in the data folder. :D
+Watch das magic
 
 ## Card Types
 
@@ -23,10 +26,6 @@ Story Narrative is a custom game built for Magic Set Editor (MSE).
 -   Story 2 and Story 3 are optional
 -   Conditional separator lines and icon rows
 
-### Installation
-Place these here folders in the data folder. :D
-Watch das magic
-
 
 ### Narrative Image
 
@@ -35,12 +34,6 @@ Watch das magic
 -   Large illustration
 -   One large story text area
 
-## Removed
-
-The project no longer uses **Card Back** templates.
-
-Instead, every playable card consists of two printed cards inside a
-sleeve.
 
 # Physical Card System
 
@@ -72,7 +65,7 @@ When instructed to take a card:
 1.  Pick up the sleeved card.
 2.  Slowly slide the Narrative card upward behind the Front card.
 3.  Reveal the title.
-4.  Continue until a stopping icon is reached.
+4.  Continue until a stopping icon is reached or end of card.
 
 Never reveal more than instructed.
 
@@ -81,22 +74,26 @@ Never reveal more than instructed.
 ## Hourglass `[H]`
 
 Stop revealing. Return the card to play. Wait until the next time you
-are instructed to reveal this card.
+are instructed to reveal this card. It symbolises you must spend more time to uncover more of cards content
 
 ## Eye + Up Arrow `[E]`
 
-Continue sliding the Narrative card upward until the next divider line
-is reached.
+Continue sliding the Narrative card upward until instructed otherwise
 
 ## Planned for Version 1.1
 
 ### Obtain icon
 
-Gain or permanently keep the card.
+Gain or permanently keep what something
 
 ### Discard icon
 
-Discard the card immediately after reaching this instruction.
+Discard the or remove from play immediately after reaching this instruction.
+
+### Put into play
+Usually a new stack of cards. 
+
+
 
 # Current Symbol Set
 
@@ -115,6 +112,4 @@ Readable aliases are also supported.
 
 # Long-Term Vision
 
-The game should develop its own symbolic language similar to Magic's
-mana system. Icons should communicate pacing, actions, requirements, and
-game state while minimizing repeated text.
+The game should develop its own symbolic language that can be used to instrukt players how to go about discovering a story.

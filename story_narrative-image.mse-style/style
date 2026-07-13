@@ -42,11 +42,11 @@ card style:
 		alignment: right middle shrink-overflow
 		font:
 			name: Trajan Pro
-			size: 23
+			size: 44
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-large
-			size: 28
+			size: 44
 		always symbol: true
 
 	illustration:

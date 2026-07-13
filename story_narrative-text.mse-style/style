@@ -45,11 +45,11 @@ card style:
 		alignment: right middle shrink-overflow
 		font:
 			name: Trajan Pro
-			size: 23
+			size: 44
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-large
-			size: 33
+			size: 44
 		always symbol: true
 
 	story 1:
@@ -75,11 +75,11 @@ card style:
 		alignment: right middle shrink-overflow
 		font:
 			name: Trajan Pro
-			size: 22
+			size: 44
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-small
-			size: 33
+			size: 44
 		always symbol: true
 
 	story 2:
@@ -106,11 +106,11 @@ card style:
 		alignment: right middle shrink-overflow
 		font:
 			name: Trajan Pro
-			size: 22
+			size: 44
 			color: rgb(30,30,30)
 		symbol font:
 			name: story-narrative-symbols-small
-			size: 33
+			size: 44
 		always symbol: true
 
 	story 3:
